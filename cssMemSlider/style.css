@@ -1,0 +1,87 @@
+html {
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background-color: rgb(224, 223, 223);
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    width: 40em;
+    height: 80%;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.mem-slider{
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.imgs {
+    width: 400%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+}
+
+.mem-img {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.text-slider {
+    width: 60%;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.texts {
+    width: 400%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden; 
+}
+
+.mem-text {
+    width: 100%;
+}
+
+.navigation {
+    display: flex;
+    justify-content: end;
+    width: 30%;
+}
+
+.nav-item{
+    width: 1rem;
+    height: 1rem;
+    line-height: 2rem;
+}
