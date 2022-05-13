@@ -10,42 +10,41 @@
 <body>
     <main class="main">
         <div class="wrapper">
+            <input type="radio" name="nav" id="slide1" hidden checked="checked">
+            <input type="radio" name="nav" id="slide2" hidden>
+            <input type="radio" name="nav" id="slide3" hidden>
+            <input type="radio" name="nav" id="slide4" hidden>
 
             <div class="mem-slider">
                 <div class="imgs">
                     <div class="mem-img" id="mem1">
                         <img src="./img/mem1.png">
+                        <span class="mem-text" id="text1">Don't touch if it works</span>
                     </div>
                     <div class="mem-img" id="mem2">
                         <img src="./img/mem2.png">
+                        <span class="mem-text" id="text2">Realy favorite language</span>
                     </div>
                     <div class="mem-img" id="mem3">
                         <img src="./img/mem3.png">
+                        <span class="mem-text" id="text3">Are you sleeping?</span>
                     </div>
                     <div class="mem-img" id="mem4">
                         <img src="./img/mem4.png">
+                        <span class="mem-text" id="text4">Dev VS QA</span>
                     </div>
                 </div>
             </div>
-            
-            <div class="container">
-                <div class="text-slider">
-                    <div class="texts">
-                        <span class="mem-text" id="text1">here will be text1</span>
-                        <span class="mem-text" id="text2">here will be text2</span>
-                        <span class="mem-text" id="text3">here will be text3</span>
-                        <span class="mem-text" id="text4">here will be text4</span>
-                    </div>
-                </div>
 
-                <nav class="navigation">
-                    <a href="#mem1"><input type="radio" class="nav-item" name="nav"></a>
-                    <a href="#mem2"><input type="radio" class="nav-item" name="nav"></a>
-                    <a href="#mem3"><input type="radio" class="nav-item" name="nav"></a>
-                    <a href="#mem4"><input type="radio" class="nav-item" name="nav"></a>
-                    </input>
-                </nav>
-            </div>
+            <nav class="navigation">
+                <div class="labels">
+                    <label class="nav-item label1" for="slide1"><div class="circule"></div></label>
+                    <label class="nav-item label2" for="slide2"><div class="circule"></div></label>
+                    <label class="nav-item label3" for="slide3"><div class="circule"></div></label>
+                    <label class="nav-item label4" for="slide4"><div class="circule"></div></label>
+
+                </div>
+            </nav>
 
         </div>
         
