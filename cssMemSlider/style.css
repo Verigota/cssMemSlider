@@ -1,0 +1,166 @@
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: rgb(224, 223, 223);
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    align-self: start;
+    width: 35em;
+    height: 100%;
+    flex-direction: column-reverse;
+    justify-content: end;
+    overflow: hidden;
+}
+
+.mem-slider{
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.imgs {
+    width: 400%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.mem-img {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.text-slider {
+    width: 60%;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.texts {
+    width: 400%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden; 
+}
+
+.mem-text {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.navigation {
+    position: fixed;
+    background-color: rgb(224, 223, 223);
+    align-self: flex-end;
+    justify-self: flex-end;
+    display: flex;
+    justify-content: end;
+    width: fit-content;
+}
+
+.labels {
+    align-self: flex-end;
+    display: flex;
+    justify-content: end;
+    width: fit-content;
+}
+
+.circule {
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    background-color: darkgrey;
+    transition: all 0.3s ease-in-out;
+    margin: 1rem;
+}
+
+.nav-item:hover .circule {
+    background-color:dimgray;
+}
+
+.nav-item:active .circule{
+    background-color:rgb(117, 45, 45);
+}
+
+#slide1:checked ~ .navigation .label1 .circule,
+#slide2:checked ~ .navigation .label2 .circule,
+#slide3:checked ~ .navigation .label3 .circule,
+#slide4:checked ~ .navigation .label4 .circule
+{
+    background-color:rgb(117, 45, 45);
+}
+
+#slide1:checked ~ .mem-slider .imgs{
+    transform: translateX(0%);
+}
+
+#slide2:checked ~ .mem-slider .imgs{
+    transform: translateX(-25%);
+}
+
+#slide3:checked ~ .mem-slider .imgs{
+    transform: translateX(-50%);
+}
+
+#slide4:checked ~ .mem-slider .imgs{
+    transform: translateX(-75%);
+}
+
+.nav-item{
+    width: fit-content;
+    vertical-align: bottom;  
+}
+
+.nav-item:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .navigation {
+        align-self: center;
+        justify-self: center;
+        margin-bottom: 2.5rem;
+        margin-right: 0rem;
+    }
+
+    img {
+        margin-bottom: 5rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .navigation {
+        align-self: flex-end;
+        justify-self: flex-end;
+        margin-right: -1rem;
+        margin-bottom: -0.5rem;
+    }
+}
